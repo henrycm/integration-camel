@@ -26,9 +26,11 @@ repositories {
 	mavenCentral()
 }
 
-
 dependencies {
-	compile("org.apache.camel:camel-spring-boot-starter:${camelVersion}")
+	compile("org.apache.camel:camel-spring-boot-starter:${camelVersion}")	
+	compile("org.apache.camel:camel-jackson:${camelVersion}")
+	compile("org.apache.camel:camel-sql:${camelVersion}")
+	compile("org.apache.camel:camel-jpa:${camelVersion}")
 	compile("org.apache.camel:camel-bindy:${camelVersion}")
 	compile("org.apache.camel:camel-csv:${camelVersion}")
 	compile("org.apache.camel:camel-stream:${camelVersion}")

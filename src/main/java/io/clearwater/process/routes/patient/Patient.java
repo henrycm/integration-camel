@@ -1,11 +1,20 @@
 package io.clearwater.process.routes.patient;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+
 import org.apache.camel.dataformat.bindy.annotation.CsvRecord;
 import org.apache.camel.dataformat.bindy.annotation.DataField;
 
-@CsvRecord(separator = ",", crlf = "UNIX")
-public class PatientCSVBean
+@Entity
+@CsvRecord(separator = ",", crlf = "UNIX", skipFirstLine = true)
+public class Patient
 {
+    @Id
+    @GeneratedValue
+    private Integer id;
+
     @DataField(pos = 1)
     private String externalId;
 
@@ -147,6 +156,16 @@ public class PatientCSVBean
     public void setCellPhone( String cellPhone )
     {
         this.cellPhone = cellPhone;
+    }
+
+    public Integer getId()
+    {
+        return id;
+    }
+
+    public void setId( Integer id )
+    {
+        this.id = id;
     }
 
 }
