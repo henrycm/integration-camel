@@ -30,6 +30,8 @@ repositories {
 dependencies {
 	compile("org.apache.camel:camel-spring-boot-starter:${camelVersion}")
 	compile("org.apache.camel:camel-bindy:${camelVersion}")
+	compile("org.apache.camel:camel-csv:${camelVersion}")
+	compile("org.apache.camel:camel-stream:${camelVersion}")
 
 	compile('org.springframework.boot:spring-boot-starter-data-jpa')
 	compile('org.hsqldb:hsqldb')

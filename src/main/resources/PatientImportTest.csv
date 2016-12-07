@@ -1,2 +1,2 @@
-SubjectGuid,CompanyGuid,SubjectId,LastName,FirstName,MI,Sex,Birthdate,Usrdef0,Usrdef1,Usrdef2,Usrdef3,Usrdef4,Lang,Comment,InProgram,HireDate,Usrdef6,Addr1,Addr2,City,State,Zip,Email,Race,TmpRec,RowVer,Usrdef77,Usrdef78,InRPProgram,TestDate,CellPhone
-{038F251E-0AA4-477A-ACEB-151008093526},{103CF0C2-2F62-4919-A8FD-151778093519},2000,Enriguez,Elina,E,M,19750310,,,,,,0,,1,,Active,,,,,K1Y 3B2,,0,0,0,,,1,20070525,877-349-9934
+SubjectGuid,LastName,FirstName,MI,Sex,Birthdate,HireDate,Zip,Email,TestDate,CellPhone
+,Enriguez,Elina,E,M,19750310,,K1Y 3B2,,20070525,877-349-9934
