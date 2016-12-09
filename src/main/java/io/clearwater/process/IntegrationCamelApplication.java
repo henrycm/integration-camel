@@ -10,7 +10,5 @@ public class IntegrationCamelApplication
     public static void main( String[] args ) throws InterruptedException
     {
         SpringApplication.run( IntegrationCamelApplication.class, args );
-
-        Thread.sleep( 10000 );
     }
 }
