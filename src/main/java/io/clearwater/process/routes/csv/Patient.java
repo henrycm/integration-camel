@@ -1,18 +1,19 @@
-package io.clearwater.process.routes.patient;
+package io.clearwater.process.routes.csv;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 import org.apache.camel.dataformat.bindy.annotation.CsvRecord;
 import org.apache.camel.dataformat.bindy.annotation.DataField;
 
 @Entity
-@CsvRecord(separator = ",", crlf = "UNIX", skipFirstLine = true)
+@CsvRecord(separator = ",", crlf = "UNIX")
 public class Patient
 {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @DataField(pos = 1)

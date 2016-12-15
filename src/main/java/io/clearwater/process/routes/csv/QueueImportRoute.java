@@ -1,4 +1,4 @@
-package io.clearwater.process.routes.patient;
+package io.clearwater.process.routes.csv;
 
 import org.apache.camel.builder.RouteBuilder;
 import org.springframework.stereotype.Component;
@@ -6,7 +6,7 @@ import org.springframework.stereotype.Component;
 import com.amazonaws.services.s3.AmazonS3Client;
 
 @Component
-public class PatientImportRoute extends RouteBuilder
+public class QueueImportRoute extends RouteBuilder
 {
     private final static String QUEUE_NAME = "testQueue";
     private final static String BUCKET_NAME = "testBucket";
@@ -25,7 +25,7 @@ public class PatientImportRoute extends RouteBuilder
             .marshal().json( JsonLibrary.Jackson )
             .to( "stream:out" )
             .log( "Finish" );
-         */
+         
 
         from( "aws-sqs://" + QUEUE_NAME + "?amazonSQSClient=#sqsClient" )
             // .filter( simple( "${header.identity} == 'login'" ) )
@@ -39,5 +39,6 @@ public class PatientImportRoute extends RouteBuilder
             .bean( AmazonS3Client.class, "deleteObject( '" + BUCKET_NAME + "', ${header.S3Key} )" )
             .otherwise()
             .log( "Deleting event: ${header.S3Key}" );
+          */
     }
 }
