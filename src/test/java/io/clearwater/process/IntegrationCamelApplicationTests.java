@@ -16,10 +16,10 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import io.clearwater.process.routes.csv.CsvAgregatorRoute;
+import io.clearwater.process.routes.csv.JPARouteSample;
 
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = CsvAgregatorRoute.class, webEnvironment = SpringBootTest.WebEnvironment.NONE)
+@SpringBootTest(classes = JPARouteSample.class, webEnvironment = SpringBootTest.WebEnvironment.NONE)
 @EnableAutoConfiguration
 public class IntegrationCamelApplicationTests
 {
